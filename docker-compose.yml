@@ -21,7 +21,7 @@ services:
     volumes:
       - code_data:/var/www/html
     ports:
-      - "80:80"
+      - "8082:80"
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
@@ -33,7 +33,7 @@ services:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
     ports:
-      - '8080:80'
+      - '8888:80'
     restart: always
     environment:
       PMA_HOST: db
